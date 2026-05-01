@@ -1,26 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@theme {
+  --color-background: #03010a;
+  --color-foreground: #eaeaf8;
+  --color-card: #0a0514;
+  --color-primary: #7c3aed;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #110820;
+  --color-secondary-foreground: #a78bfa;
+  --color-muted: #160d28;
+  --color-muted-foreground: #7c6fa0;
+  --color-border: #2a1650;
+  --radius: 0.75rem;
+  --color-highlight: #a78bfa;
+  --color-surface: #080312;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.cursive {
+  font-family: "Cedarville Cursive", cursive;
+}
+.Welcome-text {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    linear-gradient(90.01deg, #e59cff 0.01%, #ba9cff 50.01%, #9cb2ff 100%);
+  background-blend-mode: normal, screen;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Welcome-box {
+  isolation: isolate;
+  overflow: hidden;
+  align-items: center;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-radius: 32px;
+  box-shadow: inset 0 -7px 11px #a48fff1f;
+  display: flex;
+
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+  transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) box-shadow;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.button-primary {
+  background: linear-gradient(
+      180deg,
+      rgba(60, 8, 126, 0) 0%,
+      rgba(60, 8, 126, 0.32) 100%
+    ),
+    rgba(113, 47, 255, 0.12);
+  box-shadow: inset 0 0 12px #bf97ff3d;
+}
+.button-primary:hover {
+  background: linear-gradient(
+      180deg,
+      rgba(60, 8, 126, 0) 0%,
+      rgba(60, 8, 126, 0.42) 100%
+    ),
+    rgba(113, 47, 255, 0.24);
+  box-shadow: inset 0 0 12px #bf97ff70;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+@layer components{
+  .glass{
+    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
   }
+
+  .glass2{
+    background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
+    backdrop-filter: blur(24px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+  }
+
+  .glowText{
+    text-shadow: 0 0 30px color-mix(in srgb, var(--color-primary) 50%, transparent);
+  }
+
+  .glow-border{
+    box-shadow: 0 0 20px color-mix(in srgb, var(--color-primary) 50%, transparent);
+  }
+  
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities{
+
+  @keyframes fade-in{
+    from{
+      opacity: 0;
+      transform: translateY(50px);
+      filter: blur(10px);
+    }
+    to{
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0px);
+    }
+
+  }
+
+  @keyframes drift-slow{
+    0%,
+    100% {
+      transform: translate(0,0);
+    }
+    25%{
+      transform: translate(20px, -30px);
+    }
+    50%{
+      transform: translate(-15px, -20px);
+    }
+    75%{
+      transform: translate(30px, 10px);
+    }
+  }
+
+  @keyframes floating{
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes animateSkills{
+    0%{
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(-50%);
+    }
+  }
+ 
+
+  .animate-fade-in{
+    animation: fade-in 0.8s ease-out both;
+  }
+
+  .animate-float {
+    animation: floating 4s ease-in-out infinite;
+  }
+
+  .animate-animateSkills{
+    animation: animateSkills 30s linear infinite;
+  }
+
+  .animation-delay-100{
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200{
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300{
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-400{
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-500{
+    animation-delay: 500ms;
+  }
+
+  @keyframes animated-border {
+    0% {
+      stroke-dashoffset: 400;
+    }
+    100% {
+      stroke-dashoffset: -550;
+    }
+  }
+
+  .group:hover .animated-border-path {
+    animation: animated-border 1.5s linear infinite;
+  }
+
+  .animated-border:hover {
+    background-color: color-mix(in srgb, #7c3aed 15%, transparent);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 20px color-mix(in srgb, #7c3aed 20%, transparent);
+  }
+
 }
