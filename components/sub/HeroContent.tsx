@@ -5,6 +5,8 @@ import {motion} from 'framer-motion'
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion'
 import { SparklesIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image';
+import { Download } from 'lucide-react';
+import { AnimatedButton } from '@/utils/AnimatedButton';
 
 
 const HeroContent = () => {
@@ -39,11 +41,19 @@ const HeroContent = () => {
 
             </motion.p>
 
-            <motion.a variants={slideInFromLeft(1)} className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-50">
+            <div className="flex flex-row gap-5">
 
-                Learn More!
 
-            </motion.a>
+                <motion.div variants={slideInFromLeft(1.2)}>
+                    <a href="/Harold_Saenz_Resume.pdf" download="Harold_Saenz_Resume.pdf">
+                        <AnimatedButton>
+                            <Download className="w-5 h-5" />
+                            Download Resume
+                        </AnimatedButton>
+                    </a>
+                </motion.div>
+
+            </div>
             
         </div>
 
