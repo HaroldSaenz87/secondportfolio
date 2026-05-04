@@ -103,7 +103,7 @@ export const Contacts = () => {
       </div>
 
       
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10">
+      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-linear-to-r from-purple-500 to-cyan-500 py-10">
         Contact Me
       </h1>
 
@@ -179,7 +179,7 @@ export const Contacts = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-white text-sm bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 border border-[#7042f861] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 active:scale-[0.98] cursor-pointer"
+              className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-white text-sm bg-linear-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 border border-[#7042f861] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 active:scale-[0.98] cursor-pointer"
             >
               {isLoading ? (
                 <>
