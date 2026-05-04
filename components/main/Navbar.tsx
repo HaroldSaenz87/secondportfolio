@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="w-125 h-full flex flex-row items-center justify-between ">
           <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-3.75 px-5 py-2.5 rounded-full text-gray-200">
             <a href="#about-me" className="cursor-pointer hover:text-white transition">
-              About me
+              About Me
             </a>
             <a href="#skills" className="cursor-pointer hover:text-white transition">
               Skills
