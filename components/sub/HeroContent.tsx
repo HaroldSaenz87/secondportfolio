@@ -47,7 +47,7 @@ const HeroContent = () => {
 
             <motion.p variants={slideInFromLeft(0.8)} className="text-lg text-gray-400 my-5 max-w-150">
 
-                I&apos;m an aspiring Software Engineer and CS Student at UCF that is endlessly curious about how things work under the hood. From websites to mobile apps, I love builing things that are clean, and thoughtfully crafted.
+                I&apos;m an aspiring Software Engineer and Computer Science Student at UCF that is endlessly curious about how things work under the hood. From websites to mobile apps, I love builing things that are clean, and thoughtfully crafted.
 
             </motion.p>
 

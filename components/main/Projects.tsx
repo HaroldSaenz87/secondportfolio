@@ -8,9 +8,9 @@ const projects = [
         image: "/contactsManager2.jpg",
     },
     {
-        title: "Binary Tree Visualizer",
-        description: "A simple interactive Binary Search Tree (BST) visualizer that allows users to perform real-time insertions and deletions using React and SVG.",
-        image: "/BinaryTreePic.jpg",
+        title: "BookDrop",
+        description: "A cross-platform social discovery app built with React Native and Expo. It features a Zustand-powered state architecture, secure JWT authentication, and an infinite-scrolling community feed optimized for high performance.",
+        image: "/BookDrop4.jpg",
     },
     {
         title: "LesChic",
