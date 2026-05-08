@@ -12,7 +12,7 @@ import { AnimatedButton } from '@/utils/AnimatedButton';
 const HeroContent = () => {
   return (
 
-    <motion.div initial="hidden" animate="visible" className="flex flex-row items-center justify-center px-20 mt-40 w-full z-20 gap-12">
+    <motion.div initial="hidden" animate="visible" className="flex flex-col lg:flex-row items-center justify-center px-5 md:px-20 mt-20 md:mt-40 w-full z-20 gap-10 lg:gap-12">
 
 
         <div className="flex-1 flex flex-col gap-5 justify-center text-start">

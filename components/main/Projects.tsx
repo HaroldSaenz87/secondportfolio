@@ -28,7 +28,7 @@ const Projects = () => {
       </h1>
 
       
-      <div className='h-full w-full grid grid-cols-1 md:grid-cols-3 gap-10 px-10'>
+      <div className='h-full w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5 md:px-10'>
         {projects.map((project, index) => (
             <ProjectCard 
                 key={index}
