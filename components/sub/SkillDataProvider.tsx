@@ -28,7 +28,7 @@ const SkillDataProvider = ( {src, width, height, index} : Props) => {
     
     <motion.div ref={ref} initial="hidden" variants={imageVariants} animate={inView ? "visible" : "hidden"} custom={index} transition={{delay: index * animationDelay}}>
 
-        <Image src={src} width={width} height={height} alt='skills image' className="w-[50px] h-[50px] sm:w-[50px] sm:h-[50px] md:w-[65px] md:h-[65px] lg:w-[85px] lg:h-[85px] object-contain" />
+        <Image src={src} width={width} height={height} alt='skills image' className="w-12.5 h-12.5 sm:w-12.5 sm:h-12.5 md:w-16.25 md:h-16.25 lg:w-21.25 lg:h-21.25 object-contain" />
 
     </motion.div>
   )
